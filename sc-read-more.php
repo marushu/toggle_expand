@@ -31,7 +31,6 @@ load_plugin_textdomain( SC_READ_MORE_DOMAIN, false, dirname( plugin_basename( __
  * @return void
  */
 function sc_read_more( $attrs, $content = null ) {
-	$content = apply_filters( 'the_content', $content );
 	return "<span class='hide_expand'><a class='text_expand' href='#'>…続きを読む</a></span><div class='hide_obj'>$content</div>";
 }
 add_shortcode( 'more', 'sc_read_more' );
